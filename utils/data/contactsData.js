@@ -1,6 +1,6 @@
 export const contactsData = {
     email: 'albinkmathew890@gmail.com',
-    phone: '+8',
+    phone: '+971 554674016',
     address: 'Kunnel House kattikulam po ,edayoorkunnu ,wayanad,Kerala,India',
     github: 'https://github.com/albinkmathewkunnel',
     facebook: '',
