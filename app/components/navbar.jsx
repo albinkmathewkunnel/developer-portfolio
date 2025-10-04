@@ -1,4 +1,5 @@
 // @flow strict
+'use client';
 import Link from "next/link";
 import { useState } from "react"; // 1. Import useState
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // 2. Optional: Add a simple icon library
