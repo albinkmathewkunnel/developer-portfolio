@@ -1,20 +1,20 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "Masters in Computer Application",
+    duration: "2021-2023",
+    institution: "Palayad Campus(Kannur University)"
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    title: "Bachelors in Computer Application",
+    duration: "2018 - 2021",
+    institution: "Koshys Group of Institution Bangalur",
   },
   {
     id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
+    title: "Higher secondery School",
+    duration: "2016 - 2018",
+    institution: "Ghss Kattikulam",
   }
 ]
