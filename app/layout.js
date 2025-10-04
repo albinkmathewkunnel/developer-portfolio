@@ -1,19 +1,27 @@
-import { GoogleTagManager } from "@next/third-parties/google";
-import { Inter } from "next/font/google";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Footer from "./components/footer";
-import ScrollToTop from "./components/helper/scroll-to-top";
-import Navbar from "./components/navbar";
-import "./css/card.scss";
-import "./css/globals.scss";
+'use client';
 
-const inter = Inter({ subsets: ["latin"] });
+import dynamic from 'next/dynamic';
+import { Inter } from 'next/font/google';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Footer from './components/footer';
+import ScrollToTop from './components/helper/scroll-to-top';
+import Navbar from './components/navbar';
+import './css/card.scss';
+import './css/globals.scss';
+
+const inter = Inter({ subsets: ['latin'] });
+
+// Dynamically import GoogleTagManager with SSR disabled
+const GoogleTagManager = dynamic(
+  () => import('@next/third-parties/google').then((mod) => mod.GoogleTagManager),
+  { ssr: false }
+);
 
 export const metadata = {
-  title: "Portfolio of Albin K Mathew - Software Developer",
+  title: 'Portfolio of Albin K Mathew - Software Developer',
   description:
-    "This is the portfolio of Albin K Mathew. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+    'This is the portfolio of Albin K Mathew. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.',
 };
 
 export default function RootLayout({ children }) {
@@ -28,6 +36,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
+      {/* Render GoogleTagManager only on the client side */}
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
   );
